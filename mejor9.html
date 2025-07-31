@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELL INGENIEROS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #81c3d7, #f3e5ab); /* Gradiente de fondo */
+            color: #333;
+        }
+        header {
+            text-align: center;
+            background: #4a90e2; /* Azul más suave */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-family: 'Roboto', sans-serif; /* Fuente para el título */
+            font-weight: 700; /* Negrita */
+            font-size: 2.5em; /* Tamaño del título */
+            margin: 0; /* Sin margen */
+        }
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            animation: marquee 10s linear infinite;
+            font-size: 1.2em; /* Tamaño de letra para la frase en movimiento */
+            color: #fff; /* Color del texto */
+            background: #007bff; /* Fondo de la frase */
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .description {
+            background: #e3f2fd; /* Fondo para la descripción */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .flex-item {
+            flex: 1;
+            margin: 5px;
+            padding: 20px;
+            background: #e3f2fd; /* Azul claro */
+            border-radius: 10px;
+            min-width: 200px;
+            transition: transform 0.2s;
+        }
+        .flex-item:hover {
+            transform: scale(1.03); /* Efecto al pasar el mouse */
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-between; /* Espacio uniforme entre elementos */
+            flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas */
+            background: #f0f4c3; /* Fondo para la galería */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .gallery div {
+            flex: 1 1 calc(25% - 10px); /* Asegura que cada item ocupe el 25% del ancho */
+            margin: 5px;
+            text-align: center;
+        }
+        .gallery img {
+            width: 100%; /* Ajusta al ancho del contenedor */
+            height: 150px; /* Altura fija para todas las imágenes */
+            object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+        .contact-info {
+            text-align: center;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+            padding: 20px;
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+        .contact-info p {
+            font-size: 1.5em; /* Tamaño de letra más grande */
+            font-weight: bold; /* Negrita */
+            color: #4a90e2; /* Azul intenso */
+        }
+        .social-icons {
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .social-icons a {
+            margin: 0 20px;
+            font-size: 24px;
+            color: white;
+            background-color: #4a90e2; /* Color de fondo */
+            border-radius: 50%; /* Círculo */
+            width: 50px; /* Ancho del círculo */
+            height: 50px; /* Altura del círculo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none; /* Sin subrayado */
+            transition: background-color 0.3s;
+        }
+        .social-icons a:hover {
+            background-color: #3b7ea1; /* Color más oscuro al pasar el mouse */
+        }
+        .btn-contact {
+            background-color: #007bff; /* Color de fondo */
+            color: white; /* Color del texto */
+            padding: 10px 20px; /* Espaciado interno */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar el mouse */
+            font-size: 16px; /* Tamaño de texto */
+            transition: background-color 0.3s; /* Transición suave */
+            text-decoration: none; /* Sin subrayado */
+        }
+        .btn-contact:hover {
+            background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+        }
+        @media (max-width: 600px) {
+            .gallery div {
+                flex: 1 1 calc(50% - 10px); /* Dos imágenes por fila en pantallas pequeñas */
+            }
+            .flex-item {
+                flex: 1 1 100%; /* Un elemento por fila en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ATELL INGENIEROS</h1>
+    <div class="marquee">¡Bienvenidos a nuestra empresa!</div>
+</header>
+
+<section class="flex-container">
+    <div class="flex-item">
+        <h2>Misión</h2>
+        <p>Brindar soluciones integrales en refrigeración, aire acondicionado, instalación de cámaras y sistemas eléctricos, asegurando la comodidad, seguridad y eficiencia de nuestros clientes.</p>
+    </div>
+    <div class="flex-item">
+        <h2>Visión</h2>
+        <p>Ser reconocidos como la empresa líder en soluciones integrales de refrigeración y climatización, destacando por nuestra innovación y compromiso con la sostenibilidad.</p>
+    </div>
+</section>
+
+<section class="description">
+    <h2>Descripción</h2>
+    <p>Atell Ingenieros es una empresa multifuncional que se especializa en proporcionar soluciones integrales en aire acondicionado y refrigeración, así como en instalaciones eléctricas domiciliarias, sistemas de cámaras de seguridad y soporte técnico de PC e impresoras.</p>
+</section>
+
+<section class="gallery">
+    <div>
+        <h3>Aire acondicionado</h3>
+        <img src="aire01.jpg" alt="Descripción de Foto 1">
+    </div>
+    <div>
+        <h3>Refrigeración</h3>
+        <img src="refri01.jpg" alt="Descripción de Foto 2">
+    </div>
+    <div>
+        <h3>Instalación eléctrica domiciliaria</h3>
+        <img src="electricidad01.jpg" alt="Descripción de Foto 3">
+    </div>
+    <div>
+        <h3>Soporte técnico de PC e impresoras</h3>
+        <img src="computadoras01.jpg" alt="Descripción de Foto 4">
+    </div>
+</section>
+
+<div class="contact-info">
+    <p>Teléfono: (+51) 921 746 709</p>
+    <p>Correo: atellingenieros@gmail.com</p>
+    <h2 style="font-weight: bold; text-align: center;">Contáctanos</h2>
+    <a href="https://forms.gle/uKzhcHLqNnaKB9pa6" target="_blank" class="btn-contact">Enviar Mensaje</a>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.facebook.com/profile.php?id=100092662568455" target="_blank" style="background-color: #3b5998;"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.tiktok.com/@jeysonaguilarpo92" target="_blank" style="background-color: #69C9D0;"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/atellingenieros/" target="_blank" style="background-color: #C13584;"><i class="fab fa-instagram"></i></a>
+</div>
+
+<script>
+    // No se necesita JavaScript para este formulario, ya que se redirige al enlace
+</script>
+
+</body>
+</html>
